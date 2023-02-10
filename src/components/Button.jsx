@@ -28,5 +28,11 @@ const Btn = styled.button`
     right:${(props) => props.right || "initial"} ;
     cursor: pointer;
     margin-top: ${(props) => props.margin_top || "initial"} ;
+    @media (max-width:480px){
+       top: ${(props) => props.media_top};
+       right: ${(props) => props.media_right};
+       font-size: ${(props) => props.media_font_size};
+       padding: ${(props) => props.media_padding};
+    }
 `
 export default Button

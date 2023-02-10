@@ -65,4 +65,27 @@ const Wrapper = styled.div`
         letter-spacing: -0.02em;
         color: #444957;
     }
+    @media (max-width:400px){
+        display:flex ;
+        flex-direction:column ;
+        align-items:center ;
+        padding:5px;
+        img{
+            width: 204px;
+            height: 166px;
+        }
+        h3{
+            display:flex ;
+            justify-content:center ;
+            height: 35px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 35px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
 `

@@ -82,6 +82,10 @@ function App() {
             background="transparent "
             top="35px "
             right="52.5px "
+            media_top="20px"
+            media_right="20px"
+            media_font_size="11px"
+            media_padding="3px 18px"
           />
         </div>
       </Main>
@@ -231,7 +235,7 @@ function App() {
 const Wrapper = styled.div`
   background-color:#FFFFFF ;
 `
-const Main = styled.div`
+const Main = styled.main`
   display:flex;
   min-height:804px ;
   position:relative ;
@@ -276,14 +280,14 @@ const Main = styled.div`
     z-index:1 ;
     right: 0;
   }
-  @media only screen and (max-width: 1220px){
+  @media (max-width: 1220px){
     .image{
       img{
         width:40em ;
       }
     }
   }
-  @media only screen and (max-width: 1110px){
+  @media (max-width: 1110px){
     .sub_heading{
       font-size:14px ;
       line-height:23px ;
@@ -302,7 +306,7 @@ const Main = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 1000px){
+  @media (max-width: 1000px){
     .sub_heading{
       font-size:14px ;
       line-height:23px ;
@@ -322,7 +326,7 @@ const Main = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 920px){
+  @media (max-width: 920px){
     .info{
       padding:33px 0 0 40px;
     }
@@ -332,8 +336,19 @@ const Main = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 850px){
+  @media (max-width: 850px){
     flex-direction:column-reverse ;
+    .info{
+      padding-left:0 ;
+    }
+    h1{
+      left:6% ;
+    }
+    .sub_heading{
+      display:flex ;
+      justify-content:center ;
+      align-items:center ;
+    }
     .image{
       position: relative;
       img{
@@ -354,6 +369,13 @@ const Main = styled.div`
       display:none ;
     }
   }
+  @media (max-width:  400px){
+    h1{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 38px;
+    }
+  }
 `
 const AboutSection = styled.div`
   display:flex ;
@@ -365,7 +387,6 @@ const AboutSection = styled.div`
   .about{
     margin-left: 12em;
     h2{
-    width: 422px;
     height: 26px;
     font-family: 'Poppins';
     font-style: normal;
@@ -385,35 +406,49 @@ const AboutSection = styled.div`
       color: #444957;
     }
   }
-  @media only screen and (max-width: 1045px){
+  @media  (max-width: 1045px){
       .about{
           margin-left:8rem ;
       }
   } 
-  @media only screen and (max-width: 990px){
+  @media  (max-width: 990px){
       .about{
           margin-left:5rem ;
       }
   } 
-  @media only screen and (max-width: 930px){
+  @media (max-width: 930px){
+      padding:0 ;
+      display:flex ;
+      justify-content:center ;
+      align-items:center ;
       .image{
         display:none ;
       }
       .about{
+        position:relative ;
         display:flex ;
         flex-direction:column ;
         justify-content:center ;
         align-items:center ;
-        margin:0 ;
+        margin-left:0 ;
+        max-width:30rem ;
         h2{
           display:flex ;
           justify-content:center ;
+          align-items:center ;
+          font-size:26px ;
+          line-height:35px ;
         }
         p{
           display:flex ;
           align-items:center ;
           justify-content:center ;
           text-align:center ;
+          font-weight:400 ;
+          font-size:11px ;
+          line-height: 21px;
+          width:inherit ;
+          padding:0.4rem ;
         }
       }
   } 
@@ -465,7 +500,7 @@ const ArticlesSection = styled.div`
       color: #424961;
     }
   }
-  @media only screen and (max-width:1280px){
+  @media (max-width:1280px){
     display:flex ;
     flex-direction:column ;
     align-items:center ;
@@ -474,6 +509,18 @@ const ArticlesSection = styled.div`
       display:flex ;
       align-items:center ;
       justify-content:center ;
+    }
+  }
+  @media (max-width:482px){
+    h2{
+      width: 216px;
+      font-size: 28px;
+      line-height: 54px;
+    }
+  }
+  @media (max-width:400px){
+    .cards{
+      grid-template-columns:1fr ;
     }
   }
 `
