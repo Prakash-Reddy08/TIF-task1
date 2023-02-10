@@ -28,7 +28,7 @@ const Btn = styled.button`
     right:${(props) => props.right || "initial"} ;
     cursor: pointer;
     margin-top: ${(props) => props.margin_top || "initial"} ;
-    @media (max-width:480px){
+    @media (max-width:530px){
        top: ${(props) => props.media_top};
        right: ${(props) => props.media_right};
        font-size: ${(props) => props.media_font_size};
